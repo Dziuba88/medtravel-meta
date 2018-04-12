@@ -1,0 +1,23 @@
+.dropdown {
+  position: relative;
+
+  * {
+    user-select: none;
+  }
+
+  &--toggle {
+    cursor: pointer;
+  }
+
+  &--menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+  }
+
+  &.open &--menu {
+    display: block;
+  }
+}

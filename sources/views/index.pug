@@ -1,3 +1,91 @@
 extends models/layout.pug
 block variables
   - PageTitle = 'Главная'
+
+block content
+  section.mt__welcome
+    iframe#welcome(src="http://www.youtube.com/embed/P1bf9_KErv4?rel=0&autoplay=1&mute=1&showinfo=0&controls=0&loop=1&enablejsapi=1" frameborder="0")
+    button#start_bg.playing: svg: use(xlink:href="#play")
+  section.mt__about
+    .container
+      .row
+        .col.md-8.offset-md-2: h2 Компания «MedTravel» предоставляет высококвалифицированные медицинские услуги и полный туристический пакет
+        .col.md-6 
+          p Каждый гость сможет получить необходимое лечение и самостоятельно выбрать вид отдыха, который ему по душе. В Молдове, стоматология — одно из самых развитых направлений в медицине, здесь цена соответствует качеству и приятно радует пациентов. Наши лучшие специалисты составят индивидуальный план, благодаря которому мечта о здоровых зубах и ослепительной улыбке станет явью. Для нас профессионализм, качество и забота о пациентах — превыше всего.
+        .col.md-6 
+          p Также, компания берет на себя ответственность за предоставление таких услуг как: трансфер аэропорт-отель -аэропорт, персональный менеджер (к которому Вы можете обратиться в любое время на протяжении всего пребывания в стране), проживание в отеле, экскурсии по достопримечательностям Молдовы и приятные подарки.
+          p: strong Ваш отдых станет счастливым и здоровым!
+
+      #video__about.owl-carousel
+        .item-video: a.owl-video(href="http://www.youtube.com/watch?v=RtBbinpK5XI")
+        .item-video: a.owl-video(href="http://www.youtube.com/watch?v=txTqtm58AqM")
+        .item-video: a.owl-video(href="http://www.youtube.com/watch?v=I2XfVml6o24")
+  section.mt__why
+    .container
+      h2 Почему отдых в Молдавии
+      .row
+        .col.sm-6.md-4: .why
+          .why--icon: svg: use(xlink:href="#why1")
+          .why--title Выгода
+          .why--text В Молдове, медицина славится своим соотношением цены и качества. Высококвалифицированные специалисты всегда готовы помочь в решении малейших проблем со здоровьем, предоставляя широкий спектр услуг, доступный каждому.
+        .col.sm-6.md-4: .why
+          .why--icon: svg: use(xlink:href="#why2")
+          .why--title Доверие
+          .why--text Для наших клиентов, мы подбираем исключительно лучших докторов, учитывая предпочтения каждого. Наша задача, заключается в том, чтобы предоставить всю необходимую информацию для лечения и сделать сам процесс как можно более приятны
+        .col.sm-6.md-4: .why
+          .why--icon: svg: use(xlink:href="#why3")
+          .why--title Путешествие
+          .why--text Наша компания, предоставляет широкий выбор экскурсий, благодаря которым можно познать молдавскую культуру, колорит страны, попробовать национальную кухню и продегустировать вино, которым так славится наш край.
+        .col.sm-6.md-4: .why
+          .why--icon: svg: use(xlink:href="#why1")
+          .why--title Надежность
+          .why--text Наша компания предоставит все необходимое для того, чтобы Ваше лечение было совмещено с приятным отдыхом и интересными приключениями. Всю ответственность по организации мероприятий и перемещениям берет на себя надежная компания, а Вам лишь остается наслаждаться отдыхом.
+        .col.sm-6.md-4: .why
+          .why--icon: svg: use(xlink:href="#why2")
+          .why--title Качество
+          .why--text Качество услуг и препаратов является нашим главным приоритетом.  Вы можете быть уверенны в том, что мечта о белоснежной улыбке станет явью. Наши опытные специалисты с радостью помогут Вам в любом вопросе.
+        .col.sm-6.md-4: .why
+          .why--icon: svg: use(xlink:href="#why3")
+          .why--title Забота
+          .why--text На протяжении всего пребывания в Молдове, каждому клиенту будет предоставлен индивидуальный менеджер, который позаботиться о Вас. Каждый гость для нас особенно важен. Ваш комфорт – наша главная цель.
+  section.mt__guests
+    .container: .map--title: span Наши гости
+    #supermap
+  section.mt__visa
+    .container
+      h2 Нужна ли виза?
+      .row
+        .col.md-8.offset-md-2
+          .panel-group#countres
+            .selector
+              h4 Выберите вашу страну
+              .selector--list
+                ul
+                  - for(i=1;i<=25;i++)
+                    li: a(data-toggle="collapse" data-parent="#countres" href="#au" aria-expanded="true")
+                      img(src="img/countres/au.gif", alt="").flag
+                      span Австрия
+                    li: a(data-toggle="collapse" data-parent="#countres" href="#bl" aria-expanded="false")
+                      img(src="img/countres/bl.gif", alt="").flag
+                      span Бельгия
+                    li: a(data-toggle="collapse" data-parent="#countres" href="#bg" aria-expanded="false")
+                      img(src="img/countres/bg.gif", alt="").flag
+                      span Болгария
+                    li: a(data-toggle="collapse" data-parent="#countres" href="#it" aria-expanded="false")
+                      img(src="img/countres/it.gif", alt="").flag
+                      span Италия
+            .panel: #au.panel-collapse.collapse.in 
+              p Виза для граждан Австрии на територий Р.М. не требуется
+              p срок пребывании до 90 дней
+            .panel: #bl.panel-collapse.collapse
+              p Виза для граждан Бельгии на територий Р.М. не требуется
+              p срок пребывании до 90 дней
+            .panel: #bg.panel-collapse.collapse
+              p Виза для граждан Болгарии на територий Р.М. не требуется
+              p срок пребывании до 90 дней
+            .panel: #it.panel-collapse.collapse
+              p Виза для граждан Италии на територий Р.М. не требуется
+              p срок пребывании до 90 дней
+
+
+

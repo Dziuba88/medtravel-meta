@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/styles.min.css">
   </head>
   <body>
-    <header class="mt_header">
+    <header class="mt__header">
       <div class="topbar">
         <div class="container">
           <div class="topbar--wraper">
@@ -59,9 +59,261 @@
         </div>
       </div>
     </header>
-    <h1>Lorem Ipsum</h1>
+    <section class="mt__welcome">
+      <iframe id="welcome" src="http://www.youtube.com/embed/P1bf9_KErv4?rel=0&amp;autoplay=1&amp;mute=1&amp;showinfo=0&amp;controls=0&amp;loop=1&amp;enablejsapi=1" frameborder="0"></iframe>
+      <button class="playing" id="start_bg">
+        <svg>
+          <use xlink:href="#play"></use>
+        </svg>
+      </button>
+    </section>
+    <section class="mt__about">
+      <div class="container">
+        <div class="row">
+          <div class="col md-8 offset-md-2">
+            <h2>Компания «MedTravel» предоставляет высококвалифицированные медицинские услуги и полный туристический пакет</h2>
+          </div>
+          <div class="col md-6"> 
+            <p>Каждый гость сможет получить необходимое лечение и самостоятельно выбрать вид отдыха, который ему по душе. В Молдове, стоматология — одно из самых развитых направлений в медицине, здесь цена соответствует качеству и приятно радует пациентов. Наши лучшие специалисты составят индивидуальный план, благодаря которому мечта о здоровых зубах и ослепительной улыбке станет явью. Для нас профессионализм, качество и забота о пациентах — превыше всего.</p>
+          </div>
+          <div class="col md-6"> 
+            <p>Также, компания берет на себя ответственность за предоставление таких услуг как: трансфер аэропорт-отель -аэропорт, персональный менеджер (к которому Вы можете обратиться в любое время на протяжении всего пребывания в стране), проживание в отеле, экскурсии по достопримечательностям Молдовы и приятные подарки.</p>
+            <p><strong>Ваш отдых станет счастливым и здоровым!</strong></p>
+          </div>
+        </div>
+        <div class="owl-carousel" id="video__about">
+          <div class="item-video"><a class="owl-video" href="http://www.youtube.com/watch?v=RtBbinpK5XI"></a></div>
+          <div class="item-video"><a class="owl-video" href="http://www.youtube.com/watch?v=txTqtm58AqM"></a></div>
+          <div class="item-video"><a class="owl-video" href="http://www.youtube.com/watch?v=I2XfVml6o24"></a></div>
+        </div>
+      </div>
+    </section>
+    <section class="mt__why">
+      <div class="container">
+        <h2>Почему отдых в Молдавии</h2>
+        <div class="row">
+          <div class="col sm-6 md-4">
+            <div class="why">
+              <div class="why--icon">
+                <svg>
+                  <use xlink:href="#why1"></use>
+                </svg>
+              </div>
+              <div class="why--title">Выгода</div>
+              <div class="why--text">В Молдове, медицина славится своим соотношением цены и качества. Высококвалифицированные специалисты всегда готовы помочь в решении малейших проблем со здоровьем, предоставляя широкий спектр услуг, доступный каждому.</div>
+            </div>
+          </div>
+          <div class="col sm-6 md-4">
+            <div class="why">
+              <div class="why--icon">
+                <svg>
+                  <use xlink:href="#why2"></use>
+                </svg>
+              </div>
+              <div class="why--title">Доверие</div>
+              <div class="why--text">Для наших клиентов, мы подбираем исключительно лучших докторов, учитывая предпочтения каждого. Наша задача, заключается в том, чтобы предоставить всю необходимую информацию для лечения и сделать сам процесс как можно более приятны</div>
+            </div>
+          </div>
+          <div class="col sm-6 md-4">
+            <div class="why">
+              <div class="why--icon">
+                <svg>
+                  <use xlink:href="#why3"></use>
+                </svg>
+              </div>
+              <div class="why--title">Путешествие</div>
+              <div class="why--text">Наша компания, предоставляет широкий выбор экскурсий, благодаря которым можно познать молдавскую культуру, колорит страны, попробовать национальную кухню и продегустировать вино, которым так славится наш край.</div>
+            </div>
+          </div>
+          <div class="col sm-6 md-4">
+            <div class="why">
+              <div class="why--icon">
+                <svg>
+                  <use xlink:href="#why1"></use>
+                </svg>
+              </div>
+              <div class="why--title">Надежность</div>
+              <div class="why--text">Наша компания предоставит все необходимое для того, чтобы Ваше лечение было совмещено с приятным отдыхом и интересными приключениями. Всю ответственность по организации мероприятий и перемещениям берет на себя надежная компания, а Вам лишь остается наслаждаться отдыхом.</div>
+            </div>
+          </div>
+          <div class="col sm-6 md-4">
+            <div class="why">
+              <div class="why--icon">
+                <svg>
+                  <use xlink:href="#why2"></use>
+                </svg>
+              </div>
+              <div class="why--title">Качество</div>
+              <div class="why--text">Качество услуг и препаратов является нашим главным приоритетом.  Вы можете быть уверенны в том, что мечта о белоснежной улыбке станет явью. Наши опытные специалисты с радостью помогут Вам в любом вопросе.</div>
+            </div>
+          </div>
+          <div class="col sm-6 md-4">
+            <div class="why">
+              <div class="why--icon">
+                <svg>
+                  <use xlink:href="#why3"></use>
+                </svg>
+              </div>
+              <div class="why--title">Забота</div>
+              <div class="why--text">На протяжении всего пребывания в Молдове, каждому клиенту будет предоставлен индивидуальный менеджер, который позаботиться о Вас. Каждый гость для нас особенно важен. Ваш комфорт – наша главная цель.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="mt__guests">
+      <div class="container">
+        <div class="map--title"><span>Наши гости</span></div>
+      </div>
+      <div id="supermap"></div>
+    </section>
+    <section class="mt__visa">
+      <div class="container">
+        <h2>Нужна ли виза?</h2>
+        <div class="row">
+          <div class="col md-8 offset-md-2">
+            <div class="panel-group" id="countres">
+              <div class="selector">
+                <h4>Выберите вашу страну</h4>
+                <div class="selector--list">
+                  <ul>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#au" aria-expanded="true"><img class="flag" src="img/countres/au.gif" alt=""><span>Австрия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#bl" aria-expanded="false"><img class="flag" src="img/countres/bl.gif" alt=""><span>Бельгия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#bg" aria-expanded="false"><img class="flag" src="img/countres/bg.gif" alt=""><span>Болгария</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#it" aria-expanded="false"><img class="flag" src="img/countres/it.gif" alt=""><span>Италия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#au" aria-expanded="true"><img class="flag" src="img/countres/au.gif" alt=""><span>Австрия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#bl" aria-expanded="false"><img class="flag" src="img/countres/bl.gif" alt=""><span>Бельгия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#bg" aria-expanded="false"><img class="flag" src="img/countres/bg.gif" alt=""><span>Болгария</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#it" aria-expanded="false"><img class="flag" src="img/countres/it.gif" alt=""><span>Италия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#au" aria-expanded="true"><img class="flag" src="img/countres/au.gif" alt=""><span>Австрия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#bl" aria-expanded="false"><img class="flag" src="img/countres/bl.gif" alt=""><span>Бельгия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#bg" aria-expanded="false"><img class="flag" src="img/countres/bg.gif" alt=""><span>Болгария</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#it" aria-expanded="false"><img class="flag" src="img/countres/it.gif" alt=""><span>Италия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#au" aria-expanded="true"><img class="flag" src="img/countres/au.gif" alt=""><span>Австрия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#bl" aria-expanded="false"><img class="flag" src="img/countres/bl.gif" alt=""><span>Бельгия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#bg" aria-expanded="false"><img class="flag" src="img/countres/bg.gif" alt=""><span>Болгария</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#it" aria-expanded="false"><img class="flag" src="img/countres/it.gif" alt=""><span>Италия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#au" aria-expanded="true"><img class="flag" src="img/countres/au.gif" alt=""><span>Австрия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#bl" aria-expanded="false"><img class="flag" src="img/countres/bl.gif" alt=""><span>Бельгия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#bg" aria-expanded="false"><img class="flag" src="img/countres/bg.gif" alt=""><span>Болгария</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#it" aria-expanded="false"><img class="flag" src="img/countres/it.gif" alt=""><span>Италия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#au" aria-expanded="true"><img class="flag" src="img/countres/au.gif" alt=""><span>Австрия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#bl" aria-expanded="false"><img class="flag" src="img/countres/bl.gif" alt=""><span>Бельгия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#bg" aria-expanded="false"><img class="flag" src="img/countres/bg.gif" alt=""><span>Болгария</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#it" aria-expanded="false"><img class="flag" src="img/countres/it.gif" alt=""><span>Италия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#au" aria-expanded="true"><img class="flag" src="img/countres/au.gif" alt=""><span>Австрия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#bl" aria-expanded="false"><img class="flag" src="img/countres/bl.gif" alt=""><span>Бельгия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#bg" aria-expanded="false"><img class="flag" src="img/countres/bg.gif" alt=""><span>Болгария</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#it" aria-expanded="false"><img class="flag" src="img/countres/it.gif" alt=""><span>Италия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#au" aria-expanded="true"><img class="flag" src="img/countres/au.gif" alt=""><span>Австрия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#bl" aria-expanded="false"><img class="flag" src="img/countres/bl.gif" alt=""><span>Бельгия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#bg" aria-expanded="false"><img class="flag" src="img/countres/bg.gif" alt=""><span>Болгария</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#it" aria-expanded="false"><img class="flag" src="img/countres/it.gif" alt=""><span>Италия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#au" aria-expanded="true"><img class="flag" src="img/countres/au.gif" alt=""><span>Австрия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#bl" aria-expanded="false"><img class="flag" src="img/countres/bl.gif" alt=""><span>Бельгия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#bg" aria-expanded="false"><img class="flag" src="img/countres/bg.gif" alt=""><span>Болгария</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#it" aria-expanded="false"><img class="flag" src="img/countres/it.gif" alt=""><span>Италия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#au" aria-expanded="true"><img class="flag" src="img/countres/au.gif" alt=""><span>Австрия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#bl" aria-expanded="false"><img class="flag" src="img/countres/bl.gif" alt=""><span>Бельгия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#bg" aria-expanded="false"><img class="flag" src="img/countres/bg.gif" alt=""><span>Болгария</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#it" aria-expanded="false"><img class="flag" src="img/countres/it.gif" alt=""><span>Италия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#au" aria-expanded="true"><img class="flag" src="img/countres/au.gif" alt=""><span>Австрия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#bl" aria-expanded="false"><img class="flag" src="img/countres/bl.gif" alt=""><span>Бельгия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#bg" aria-expanded="false"><img class="flag" src="img/countres/bg.gif" alt=""><span>Болгария</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#it" aria-expanded="false"><img class="flag" src="img/countres/it.gif" alt=""><span>Италия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#au" aria-expanded="true"><img class="flag" src="img/countres/au.gif" alt=""><span>Австрия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#bl" aria-expanded="false"><img class="flag" src="img/countres/bl.gif" alt=""><span>Бельгия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#bg" aria-expanded="false"><img class="flag" src="img/countres/bg.gif" alt=""><span>Болгария</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#it" aria-expanded="false"><img class="flag" src="img/countres/it.gif" alt=""><span>Италия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#au" aria-expanded="true"><img class="flag" src="img/countres/au.gif" alt=""><span>Австрия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#bl" aria-expanded="false"><img class="flag" src="img/countres/bl.gif" alt=""><span>Бельгия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#bg" aria-expanded="false"><img class="flag" src="img/countres/bg.gif" alt=""><span>Болгария</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#it" aria-expanded="false"><img class="flag" src="img/countres/it.gif" alt=""><span>Италия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#au" aria-expanded="true"><img class="flag" src="img/countres/au.gif" alt=""><span>Австрия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#bl" aria-expanded="false"><img class="flag" src="img/countres/bl.gif" alt=""><span>Бельгия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#bg" aria-expanded="false"><img class="flag" src="img/countres/bg.gif" alt=""><span>Болгария</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#it" aria-expanded="false"><img class="flag" src="img/countres/it.gif" alt=""><span>Италия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#au" aria-expanded="true"><img class="flag" src="img/countres/au.gif" alt=""><span>Австрия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#bl" aria-expanded="false"><img class="flag" src="img/countres/bl.gif" alt=""><span>Бельгия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#bg" aria-expanded="false"><img class="flag" src="img/countres/bg.gif" alt=""><span>Болгария</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#it" aria-expanded="false"><img class="flag" src="img/countres/it.gif" alt=""><span>Италия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#au" aria-expanded="true"><img class="flag" src="img/countres/au.gif" alt=""><span>Австрия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#bl" aria-expanded="false"><img class="flag" src="img/countres/bl.gif" alt=""><span>Бельгия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#bg" aria-expanded="false"><img class="flag" src="img/countres/bg.gif" alt=""><span>Болгария</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#it" aria-expanded="false"><img class="flag" src="img/countres/it.gif" alt=""><span>Италия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#au" aria-expanded="true"><img class="flag" src="img/countres/au.gif" alt=""><span>Австрия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#bl" aria-expanded="false"><img class="flag" src="img/countres/bl.gif" alt=""><span>Бельгия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#bg" aria-expanded="false"><img class="flag" src="img/countres/bg.gif" alt=""><span>Болгария</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#it" aria-expanded="false"><img class="flag" src="img/countres/it.gif" alt=""><span>Италия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#au" aria-expanded="true"><img class="flag" src="img/countres/au.gif" alt=""><span>Австрия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#bl" aria-expanded="false"><img class="flag" src="img/countres/bl.gif" alt=""><span>Бельгия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#bg" aria-expanded="false"><img class="flag" src="img/countres/bg.gif" alt=""><span>Болгария</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#it" aria-expanded="false"><img class="flag" src="img/countres/it.gif" alt=""><span>Италия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#au" aria-expanded="true"><img class="flag" src="img/countres/au.gif" alt=""><span>Австрия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#bl" aria-expanded="false"><img class="flag" src="img/countres/bl.gif" alt=""><span>Бельгия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#bg" aria-expanded="false"><img class="flag" src="img/countres/bg.gif" alt=""><span>Болгария</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#it" aria-expanded="false"><img class="flag" src="img/countres/it.gif" alt=""><span>Италия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#au" aria-expanded="true"><img class="flag" src="img/countres/au.gif" alt=""><span>Австрия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#bl" aria-expanded="false"><img class="flag" src="img/countres/bl.gif" alt=""><span>Бельгия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#bg" aria-expanded="false"><img class="flag" src="img/countres/bg.gif" alt=""><span>Болгария</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#it" aria-expanded="false"><img class="flag" src="img/countres/it.gif" alt=""><span>Италия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#au" aria-expanded="true"><img class="flag" src="img/countres/au.gif" alt=""><span>Австрия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#bl" aria-expanded="false"><img class="flag" src="img/countres/bl.gif" alt=""><span>Бельгия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#bg" aria-expanded="false"><img class="flag" src="img/countres/bg.gif" alt=""><span>Болгария</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#it" aria-expanded="false"><img class="flag" src="img/countres/it.gif" alt=""><span>Италия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#au" aria-expanded="true"><img class="flag" src="img/countres/au.gif" alt=""><span>Австрия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#bl" aria-expanded="false"><img class="flag" src="img/countres/bl.gif" alt=""><span>Бельгия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#bg" aria-expanded="false"><img class="flag" src="img/countres/bg.gif" alt=""><span>Болгария</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#it" aria-expanded="false"><img class="flag" src="img/countres/it.gif" alt=""><span>Италия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#au" aria-expanded="true"><img class="flag" src="img/countres/au.gif" alt=""><span>Австрия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#bl" aria-expanded="false"><img class="flag" src="img/countres/bl.gif" alt=""><span>Бельгия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#bg" aria-expanded="false"><img class="flag" src="img/countres/bg.gif" alt=""><span>Болгария</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#it" aria-expanded="false"><img class="flag" src="img/countres/it.gif" alt=""><span>Италия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#au" aria-expanded="true"><img class="flag" src="img/countres/au.gif" alt=""><span>Австрия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#bl" aria-expanded="false"><img class="flag" src="img/countres/bl.gif" alt=""><span>Бельгия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#bg" aria-expanded="false"><img class="flag" src="img/countres/bg.gif" alt=""><span>Болгария</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#it" aria-expanded="false"><img class="flag" src="img/countres/it.gif" alt=""><span>Италия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#au" aria-expanded="true"><img class="flag" src="img/countres/au.gif" alt=""><span>Австрия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#bl" aria-expanded="false"><img class="flag" src="img/countres/bl.gif" alt=""><span>Бельгия</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#bg" aria-expanded="false"><img class="flag" src="img/countres/bg.gif" alt=""><span>Болгария</span></a></li>
+                    <li><a data-toggle="collapse" data-parent="#countres" href="#it" aria-expanded="false"><img class="flag" src="img/countres/it.gif" alt=""><span>Италия</span></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel">
+                <div class="panel-collapse collapse in" id="au"> 
+                  <p>Виза для граждан Австрии на територий Р.М. не требуется</p>
+                  <p>срок пребывании до 90 дней</p>
+                </div>
+              </div>
+              <div class="panel">
+                <div class="panel-collapse collapse" id="bl">
+                  <p>Виза для граждан Бельгии на територий Р.М. не требуется</p>
+                  <p>срок пребывании до 90 дней</p>
+                </div>
+              </div>
+              <div class="panel">
+                <div class="panel-collapse collapse" id="bg">
+                  <p>Виза для граждан Болгарии на територий Р.М. не требуется</p>
+                  <p>срок пребывании до 90 дней</p>
+                </div>
+              </div>
+              <div class="panel">
+                <div class="panel-collapse collapse" id="it">
+                  <p>Виза для граждан Италии на територий Р.М. не требуется</p>
+                  <p>срок пребывании до 90 дней</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- block scripts-->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/plugins.min.js"></script>
+    <script async src="https://www.youtube.com/iframe_api"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLa52E3EJeehDidU_gDBx4B4NMzh01hiY&amp;language=ru&amp;amp;amp;amp;amp;sensor=false"></script>
     <script src="js/app.js"></script>
   </body>
 </html>

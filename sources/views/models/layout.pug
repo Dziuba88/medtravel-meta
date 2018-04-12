@@ -11,7 +11,7 @@ html(lang="ru")
     link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500&amp;subset=cyrillic")
     link(rel="stylesheet", href="css/styles.min.css")
   body
-    header.mt_header
+    header.mt__header
       .topbar
         .container
           .topbar--wraper
@@ -45,11 +45,12 @@ html(lang="ru")
                     li: a(href="") IS
                     li: a(href="") DE
     block content
-    h1 Lorem Ipsum
-    block scripts
-      script(src="js/jquery-3.3.1.min.js")
-      script(src="js/plugins.min.js")
-      script(src="js/app.js")
+    // block scripts
+    script(src="js/jquery-3.3.1.min.js")
+    script(src="js/plugins.min.js")
+    script(async src="https://www.youtube.com/iframe_api")
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLa52E3EJeehDidU_gDBx4B4NMzh01hiY&language=ru&amp;amp;amp;amp;sensor=false")
+    script(src="js/app.js")
 
 
 

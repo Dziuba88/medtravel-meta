@@ -4,8 +4,9 @@ block variables
 
 block content
   section.mt__welcome
-    iframe#welcome(src="http://www.youtube.com/embed/P1bf9_KErv4?rel=0&autoplay=1&mute=1&showinfo=0&controls=0&loop=1&enablejsapi=1" frameborder="0")
-    button#start_bg.playing: svg: use(xlink:href="#play")
+    .welcome--video: iframe#welcome(src="http://www.youtube.com/embed/P1bf9_KErv4?rel=0&autoplay=1&mute=1&showinfo=0&controls=0&loop=1&enablejsapi=1" frameborder="0")
+    .welcome--th
+    button#start_bg: svg: use(xlink:href="#play")
   section.mt__about
     .container
       .row
@@ -48,6 +49,14 @@ block content
           .why--icon: svg: use(xlink:href="#why3")
           .why--title Забота
           .why--text На протяжении всего пребывания в Молдове, каждому клиенту будет предоставлен индивидуальный менеджер, который позаботиться о Вас. Каждый гость для нас особенно важен. Ваш комфорт – наша главная цель.
+  section.mt__about--slider.owl-carousel
+    - for(i=1;i<=5;i++)
+      .item
+        img(src="img/slide.jpg", alt="").item--slide
+        .item--text
+          .container
+            .row
+              .col.md-8.offset-md-2 Разнообразный и богатый опыт укрепление и развитие структуры позволяет оценить значение дальнейших направлений развития. Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации систем массового участия. 
   section.mt__guests
     .container: .map--title: span Наши гости
     #supermap

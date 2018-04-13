@@ -5,7 +5,7 @@
   background-color: #000000;
   overflow: hidden;
 
-  #welcome {
+  iframe#welcome {
     position: absolute;
     top: -50%;
     left: -50%;
@@ -14,6 +14,17 @@
     display: block;
     width: 200% !important;
     height: 200% !important;
+  }
+  .welcome--video {
+    position: absolute;display: none;
+    left: 0;right: 0;top: 0;bottom: 0;
+    overflow: hidden !important;
+  }
+  .welcome--th {
+    position: absolute;z-index: 1;
+    background: url(../img/welcome_th.jpg) no-repeat center center;
+    background-size: cover;
+    top: 0;left: 0;right: 0;bottom: 0;
   }
 
   button {
@@ -163,7 +174,55 @@
   }
 }
 
+.mt__about--slider {
+  .item {
+    position: relative;
 
+    &--text {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(#000, .55);
+      padding: 20px 0 40px;
+      color: #ffffff;
+      font-size: 18px;
+      line-height: 25px;
+      text-align: center;
+    }
+  }
+  .owl-nav {
+    width: 1200px;
+    margin: 0 auto;
+    max-width: 100%;
+    position: relative;
+    button {
+      position: absolute;
+      bottom: 50px;
+      margin-top: -28px;
+      opacity: .5;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &.owl-prev {
+        left: 15px;
+      }
+
+      &.owl-next {
+        right: 15px;
+      }
+
+      svg {
+        display: block;
+        width: 19px;
+        height: 56px;
+        fill: #ffffff;
+      }
+    }
+  }
+}
 
 
 
@@ -223,13 +282,22 @@
     border: 2px solid #acacac;
     border-radius: 5px;
 
+    h4 {
+      margin: 0;
+      font-size: 20px;
+      line-height: 28px;
+      color: #464646;
+      background-color: #ededed;
+      padding: 10px 20px;
+    }
+
     &--list {
       height: 140px;
       padding: 10px 5px 10px 0;
 
       ul {
         margin: 0;
-        padding: 10px 15px 10px 0;
+        padding: 0 10px 0 0;
         list-style: none;
         list-style-image: none;
 
@@ -246,9 +314,11 @@
               margin-right: 10px;
             }
 
-            &[aria-expanded=true] {
-              background-color: #f2f2f2;
+            &:first-child a {
+              border-top: 1px solid #f2f2f2;
             }
+            &:hover {opacity: 0.75;}
+            &[aria-expanded=true] {background-color: #f2f2f2;opacity: 1;}
           }
         }
       }

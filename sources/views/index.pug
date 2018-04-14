@@ -56,7 +56,84 @@ block content
         .item--text
           .container
             .row
-              .col.md-8.offset-md-2 Разнообразный и богатый опыт укрепление и развитие структуры позволяет оценить значение дальнейших направлений развития. Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации систем массового участия. 
+              .col.md-10.offset-md-1 
+                p Разнообразный и богатый опыт укрепление и развитие структуры позволяет оценить значение дальнейших направлений развития. Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации систем массового участия. 
+  section.mt__feedback
+    .container
+      h2 Отзывы
+      .owl-carousel
+        - for(i=1;i<=5;i++)
+          .item
+            .item--image
+              img(src="img/fb1.jpg", alt="")
+              span: svg: use(xlink:href="#play")
+            .item--text
+              h4 Heather
+                small Германия
+              p Nullam leo nulla, ultrices ut justo vitae, congue semper lectus. In ultrices ligula sed luctus venenatis
+          .item
+            .item--image
+              img(src="img/fb2.jpg", alt="")
+              span: svg: use(xlink:href="#play")
+            .item--text
+              h4 Каролина и Жулиус
+                small Франция
+              p Nullam leo nulla, ultrices ut justo vitae, congue semper lectus. In ultrices ligula sed luctus venenatis
+          .item
+            .item--image
+              img(src="img/fb3.jpg", alt="")
+              span: svg: use(xlink:href="#play")
+            .item--text
+              h4 Оливия
+                small Испания
+              p Nullam leo nulla, ultrices ut justo vitae, congue semper lectus. In ultrices ligula sed luctus venenatis
+          .item
+            .item--image
+              img(src="img/fb4.jpg", alt="")
+              span: svg: use(xlink:href="#play")
+            .item--text
+              h4 Оливия
+                small Испания
+              p Nullam leo nulla, ultrices ut justo vitae, congue semper lectus. In ultrices ligula sed luctus venenatis
+  section.mt__how
+    .container
+      h2 Как мы работаем
+      .row
+        .col.sm-6.md-4: .item
+          img(src="img/l1.png", alt="")
+          span Диск с фото 3D , отправляете нам заявку для врача (макисмальное время ожидания ответа 3 рабочих дня).
+        .col.sm-6.md-4: .item
+          img(src="img/l2.png", alt="")
+          span После утверждения предварительной стоимости лечения , выбираете туристический пакет проводите заказ на сайте.
+        .col.sm-6.md-4: .item
+          img(src="img/l3.png", alt="")
+          span В течение 1 рабочего дня подтверждения ваших дат пребывания , точной стоимости тура, подробное консультирование по поводу лечения и туристического отдыха.
+        .col.sm-6.md-4: .item
+          img(src="img/l4.png", alt="")
+          span Заключаем соглашение, и предоставляем вам наши обязательства на время пребывания в стране
+        .col.sm-6.md-4: .item
+          img(src="img/l5.png", alt="")
+          span Встречаем вас в аэропорту, осуществляем трансфер и распологаем в отеле
+        .col.sm-6.md-4: .item
+          img(src="img/l6.png", alt="")
+          span На время пребывания у нас,  на связи с вами всегда ваш персональный менеджер
+  section.mt__priceform
+    .container
+      h2 Расчет стоимости лечения
+      form: .row
+        .col.md-6
+          .row
+            .col.sm-6: .input--light: input(type="text" placeholder="Имя")
+            .col.sm-6: .input--light: input(type="text" placeholder="Фамилия")
+            .col.sm-6: .input--light: input(type="tel" placeholder="Телефон/Viber/WhatsApp")
+            .col.sm-6: .input--light: input(type="email" placeholder="E-mail")
+        .col.md-6: .input--light: textarea(cols="30", rows="10" placeholder="Сообщение")
+        .col.md-6: .input--upload
+          input(type="file")#file_upload
+          label(for="file_upload") 
+            svg: use(xlink:href="#upload")
+            span Прикрепить панорамный снимок либо 3D
+
   section.mt__guests
     .container: .map--title: span Наши гости
     #supermap

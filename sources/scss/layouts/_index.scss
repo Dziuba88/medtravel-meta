@@ -4,6 +4,7 @@
   padding-top: 37.5%;
   background-color: #000000;
   overflow: hidden;
+  backface-visibility: hidden;
 
   iframe#welcome {
     position: absolute;
@@ -189,6 +190,35 @@
       font-size: 18px;
       line-height: 25px;
       text-align: center;
+      height: 160px;
+
+      p {
+        margin: 0;
+        height: 75px;
+        overflow: hidden;
+      }
+    }
+  }
+  .owl-dots {
+    position: absolute; 
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 0;
+
+    .owl-dot {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      background-color: transparent;
+      border: 2px solid #ffffff;
+      border-radius: 100%;
+      margin: 0 4.5px;
+
+      &:hover, &.active {
+        background-color: #fff;
+      }
     }
   }
   .owl-nav {
@@ -223,11 +253,155 @@
     }
   }
 }
+.mt__feedback {
+  background-color: #f5f5f5;
+  padding: 60px 0;
 
+  .container {
+    padding: 0;
+  }
 
+  .owl-carousel {
+    .item {
+      padding: 0 15px;
 
+      &--image {
+        position: relative;
+        background-color: #000000;
+        border-radius: 15px;
+        overflow: hidden;
+        backface-visibility: hidden;
+        cursor: pointer;
 
+        img {
+          position: relative;
+          display: block;
+          opacity: .95;
+        }
 
+        span {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          z-index: 2;
+          width: 40px;
+          height: 40px;
+          margin-top: -20px;
+          margin-left: -20px;
+          border: none;
+          background-color: rgba($color_main, .9);
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          border-radius: 100%;
+          opacity: 0;
+      
+          svg {
+            width: 16px;
+            height: 16px;
+            fill: #ffffff;
+            display: block;
+          }
+        }
+
+        &:hover {
+          img {opacity: .45;}
+          span {opacity: 1;}
+        }
+      }
+
+      &--text {
+        padding-top: 20px;
+        h4 {
+          font-size: 18px;
+          border-bottom: 1px solid #1571cf;
+          margin-bottom: 10px;
+          small {
+            display: block;
+            font-weight: 400;
+            font-size: 14px;
+            padding-top: 5px;
+            padding-bottom: 10px;
+          }
+        }
+
+        p {
+          margin: 0;
+          font-size: 14px;
+          line-height: 22px;
+        }
+      }
+    }
+
+    .owl-nav {
+      button {
+        position: absolute;
+        top: 50%;
+        margin-top: -28px;
+        opacity: .5;
+
+        &:hover {
+          opacity: 1;
+        }
+
+        &.owl-prev {
+          left: -60px;
+        }
+
+        &.owl-next {
+          right: -60px;
+        }
+
+        svg {
+          display: block;
+          width: 19px;
+          height: 56px;
+          fill: #555555;
+        }
+      }
+    }
+  }
+}
+
+.mt__how {
+  padding: 60px 0 20px;
+
+  .row {
+    align-items: stretch;
+
+    .col {
+      margin-bottom: 40px;
+    }
+  }
+
+  .item {
+    height: 100%;
+    border-bottom: 1px solid #cccccc;
+    display: flex;
+    align-items: flex-start;
+    img {
+      display: block;
+      flex: none;
+    }
+    span {
+      display: block;
+      flex: 1;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-left: 10px;
+      font-size: 14px;
+      line-height: 16px;
+      color: #333333;
+    }
+  }
+}
+
+.mt__priceform {
+  padding: 60px 0;
+  background: url(../img/price_bg.jpg) no-repeat center center;
+  background-size: cover;
+  color: #ffffff;
+}
 
 
 

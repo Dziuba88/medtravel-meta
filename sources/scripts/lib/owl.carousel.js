@@ -210,7 +210,7 @@
 		dragEndSpeed: false,
 
 		responsive: {},
-		responsiveRefreshRate: 200,
+		responsiveRefreshRate: 0,
 		responsiveBaseElement: window,
 
 		fallbackEasing: 'swing',

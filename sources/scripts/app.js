@@ -52,6 +52,14 @@
     navText: ['<svg><use xlink:href="#prev"></use></svg>' , '<svg><use xlink:href="#next"></use></svg>']
   })
 
+  $('.mt__feedback .owl-carousel').owlCarousel({
+    loop: true,
+    dots: false,
+    nav: true,
+    navText: ['<svg><use xlink:href="#prev"></use></svg>' , '<svg><use xlink:href="#next"></use></svg>'],
+    responsive : {0:{items: 1,},480:{items: 2,},768:{items: 3,},1000:{items: 4,}}
+  })
+
   // supermap //
     var map_styler = [
       {

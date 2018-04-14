@@ -16,33 +16,32 @@
 
   createSticky($(".navbar"));
 
+  if ($('#welcome').length) {
+    var is_playing = false;
+    function onYouTubeIframeAPIReady() {
+      var player;
+      player = new YT.Player('welcome', {
+        events: {
+          //onReady: function(e) {e.target.mute();}
+        }
+      });
 
-  var is_playing = false;
-  function onYouTubeIframeAPIReady() {
-    var player;
-    player = new YT.Player('welcome', {
-      events: {
-        onReady: function(e) {e.target.mute();}
-      }
-    });
-
-    var playButton = document.getElementById("start_bg");
-    var that = this
-    playButton.addEventListener("click", function() {
-      if (that.is_playing) {
-        player.pauseVideo();
-        that.is_playing = false;
-        this.classList.remove('playing');
-        $('.welcome--th').show();
-        $('.welcome--video').hide();
-      } else {
-        player.playVideo();
-        that.is_playing = true;
-        this.classList.add('playing')
-        $('.welcome--th').hide();
-        $('.welcome--video').show();
-      }
-    });
+      var playButton = document.getElementById("start_bg");
+      var that = this
+      playButton.addEventListener("click", function() {
+        if (that.is_playing) {
+          player.pauseVideo();
+          that.is_playing = false;
+          this.classList.remove('playing');
+          $('.welcome--video').hide();
+        } else {
+          player.playVideo();
+          that.is_playing = true;
+          this.classList.add('playing')
+          $('.welcome--video').show();
+        }
+      });
+    }
   }
 
   $('#video__about').owlCarousel({
@@ -91,6 +90,7 @@
   });
 
   // supermap //
+  if ($('#supermap').length) {
     var map_styler = [
       {
         "elementType": "geometry",
@@ -227,6 +227,7 @@
             }
         })(marker, i));
     }
+  }
 
 
   $('[data-toggle=collapse]').click(function (e) {
@@ -258,7 +259,8 @@
     theme: 'light2',
     width: '100%',
     minimumResultsForSearch: -1,
-  }).on("select2:open", function () {
+  })
+  .on("select2:open", function () {
     $('.select2-results__options').niceScroll({
       cursorcolor: "#00b7e8",
       cursoropacitymin: .1,
@@ -270,8 +272,6 @@
       railpadding: { top: 5, right: 5, left: 5, bottom: 5 }
     });
   });
-
-
 
   $(window).on('resize', function() {
     setTimeout(function () {

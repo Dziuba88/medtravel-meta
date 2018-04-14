@@ -5,6 +5,13 @@ body {
   color: $color_base;
   background-color: #ffffff;
   overflow-x: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-height: 100vh;
+
+  .flexed {flex: 1}
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -37,3 +44,194 @@ section h2 {
     height: auto;
   }
 }
+
+
+form {
+  .input--light {
+    padding-bottom: 20px;
+    position: relative;
+
+    .calendar {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      fill: #1571cf;
+      right: 10px;
+      top: 15px;
+    }
+
+    input, textarea {
+      display: block;
+      width: 100%;
+      border: none;
+      box-shadow: none;
+      border-bottom: 2px solid #1571cf;
+      resize: none;
+      font-size: 18px;
+      line-height: 20px;
+      color: #444444;
+
+      &::-webkit-input-placeholder { color: #444444; opacity: 1; }
+      &::-moz-placeholder { color: #444444; opacity: 1; }
+      &:-ms-input-placeholder { color: #444444; opacity: 1; }
+
+      &:focus::-webkit-input-placeholder { color: #ffffff; opacity: 1; }
+      &:focus::-moz-placeholder { color: #ffffff; opacity: 1; }
+      &:focus:-ms-input-placeholder { color: #ffffff; opacity: 1; }
+    }
+    input {
+      padding: 0 20px;
+      height: 50px;
+      &::-webkit-inner-spin-button, &::-webkit-calendar-picker-indicator {display: none;-webkit-appearance: none;}
+    }
+    textarea {
+      padding: 15px 20px;
+      height: 120px;
+    }
+  }
+  .input--light2 {
+    padding-bottom: 20px;
+    position: relative;
+
+    .calendar {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      fill: #00b7e8;
+      right: 10px;
+      top: 15px;
+    }
+
+    input, textarea {
+      display: block;
+      width: 100%;
+      border: none;
+      box-shadow: none;
+      border-bottom: 2px solid #00b7e8;
+      resize: none;
+      font-size: 18px;
+      line-height: 20px;
+      color: #444444;
+
+      &::-webkit-input-placeholder { color: #444444; opacity: 1; }
+      &::-moz-placeholder { color: #444444; opacity: 1; }
+      &:-ms-input-placeholder { color: #444444; opacity: 1; }
+
+      &:focus::-webkit-input-placeholder { color: #ffffff; opacity: 1; }
+      &:focus::-moz-placeholder { color: #ffffff; opacity: 1; }
+      &:focus:-ms-input-placeholder { color: #ffffff; opacity: 1; }
+    }
+    input {
+      padding: 0 20px;
+      height: 50px;
+      &::-webkit-inner-spin-button, &::-webkit-calendar-picker-indicator {display: none;-webkit-appearance: none;}
+    }
+    textarea {
+      padding: 15px 20px;
+      height: 120px;
+    }
+  }
+
+  .input--upload {
+    input {
+      position: fixed;
+      top: -10000px;
+      left: -1000px;
+
+      + label {
+        display: flex;
+        align-items: center;
+        border-bottom: 2px solid #ffffff;
+        height: 50px;
+        cursor: pointer;
+        user-select: none;
+
+        &:hover span {
+          opacity: 0.75;
+        }
+
+        svg {
+          display: block;
+          width: 20px;
+          height: 20px;
+          flex: none;
+          margin-right: 10px;
+          fill: #ffffff;
+        }
+
+        span {
+          width: 100%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  &.submit {
+    background-color: #2bd1ff;
+    color: #ffffff;
+
+    &:hover {
+      background-color: #4ed7fd;
+    }
+
+    &.fat {
+      font-size: 24px;
+      line-height: 30px;
+      padding: 23px 50px;
+      border-radius: 8px;
+    }
+  }
+}
+.nicescroll-rails {
+  box-sizing: content-box;
+}
+.mfp-gallery {
+  .mfp-image-holder .mfp-content {
+    padding: 40px ;
+  }
+  .mfp-wraper {
+    width: 555px;
+    max-width: 100%;
+    background-color: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  .mfp-close {
+    position: absolute;
+    top: 33px;
+    right: 10px;
+    background: url(../img/g_close.png);
+    width: 14px;
+    height: 14px;
+  }
+  img.mfp-img {
+    padding: 0;
+    display: block;
+    width: 100%;
+  }
+  .mfp-info {
+    padding: 40px;
+
+    .mfp-title {
+      margin: 0 0 10px;
+      font-size: 24px;
+      line-height: 26px;
+      color: #221f20;
+    }
+    .mpf-desc {
+      margin: 0;
+      font-size: 16px;
+      line-height: 26px;
+      color: #444444;
+    }
+  }
+}
+.select2-container {z-index: 1;}

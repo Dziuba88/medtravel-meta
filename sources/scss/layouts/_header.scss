@@ -3,19 +3,101 @@
   color: #ffffff;
   position: relative;
   z-index: 10;
+  flex : none;
 }
 
 .topbar {
   background-color: #ffffff;
+  padding: 10px 15px;
 
-  &--wraper {
-    display: flex;
-    align-items: center;
-    height: 50px;
+  .col {
+    &:first-child {
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 0;
+
+        li {
+          display: inline-block;
+          margin-right: 8px;
+
+          a {
+            display: block;
+            color: #00b7e8;
+
+            &:hover {
+              color: #78c9f3;
+            }
+
+            svg {
+              display: block;
+              width: 22px;
+              height: 22px;
+              fill: currentColor;
+            }
+          }
+        }
+      }
+    }
+    &:last-child {
+      text-align: right;
+      a {
+        display: inline-block;
+        padding: 0 10px;
+        line-height: 1;
+        vertical-align: middle;
+        margin-left: 14px;
+        text-decoration: none;
+        color: #000000;
+
+        &:hover {color: #00b7e8;}
+      }
+      span.icons {
+        display: inline-block;
+        font-size: 0;
+        line-height: 1;
+        vertical-align: middle;
+        margin-right: -15px;
+
+        a {
+          display: inline-block;
+          margin-left: 8px;
+          padding: 0;
+
+          &.f1 {
+            color: #611f90;
+            &:hover {
+              color: #6c3a8f;
+            }
+          }
+          &.f2 {
+            color: #009d1c;
+            &:hover {
+              color: #49a55a;
+            }
+          }
+
+        }
+        svg {
+          display: inline-block;
+          width: 22px;
+          height: 22px;
+          fill: currentColor;
+        }
+      }
+      img {
+        line-height: 1;
+        vertical-align: middle;
+        margin-left: 5px;
+      }
+    }
   }
-}
 
+}
+.stick {height: 105px;}
 .navbar {
+  background-color: $color_main;
   &--wraper {
     display: flex;
     align-items: center;
@@ -163,5 +245,14 @@
         }
       }
     }
+  }
+
+  &.sticky {
+    position: fixed;
+    top: 0;left: 0;right: 0;
+    z-index: 99;
+
+    .navbar--nav ul li a {padding: 30px 0 25px;}
+    .navbar__right .dropdown {padding: 0px 10px 0;}
   }
 }

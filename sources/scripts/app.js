@@ -5,6 +5,18 @@
     document.body.insertBefore(div, document.body.childNodes[0]);
   });
 
+  function createSticky(sticky) {
+    if (typeof sticky !== "undefined") {
+      var pos = sticky.offset().top,  win = $(window);
+      win.on("scroll", function() {
+        win.scrollTop() >= pos ? sticky.addClass("sticky") : sticky.removeClass("sticky");
+      });
+    }
+  };
+
+  createSticky($(".navbar"));
+
+
   var is_playing = false;
   function onYouTubeIframeAPIReady() {
     var player;
@@ -36,9 +48,6 @@
   $('#video__about').owlCarousel({
     items: 1,
     loop: true,
-    video: true,
-    videoHeight: 500,
-    lazyLoad: true,
     dots: false,
     nav: true,
     navText: ['<svg><use xlink:href="#prev"></use></svg>' , '<svg><use xlink:href="#next"></use></svg>']
@@ -58,7 +67,28 @@
     nav: true,
     navText: ['<svg><use xlink:href="#prev"></use></svg>' , '<svg><use xlink:href="#next"></use></svg>'],
     responsive : {0:{items: 1,},480:{items: 2,},768:{items: 3,},1000:{items: 4,}}
-  })
+  });
+
+  $('.mt__partners .owl-carousel').owlCarousel({
+    loop: true,
+    dots: false,
+    nav: true,
+    autoplay: true,
+    autoplayTimeout: 2000,
+    navText: ['<svg><use xlink:href="#prev"></use></svg>' , '<svg><use xlink:href="#next"></use></svg>'],
+    responsive : {0:{items: 1},480:{items: 3},768:{items: 4},1000:{items: 5}}
+  });
+
+  $('.mt__cert .owl-carousel').owlCarousel({
+    items: 1,
+    loop: true,
+    dots: true,
+    nav: true,
+    autoplay: true,
+    autoplayTimeout: 2000,
+    autoplayHoverPause: true,
+    navText: ['<svg><use xlink:href="#prev"></use></svg>' , '<svg><use xlink:href="#next"></use></svg>'],
+  });
 
   // supermap //
     var map_styler = [
@@ -204,23 +234,76 @@
       e.preventDefault();
       e.stopPropagation();
     }
-  })
+  });
 
   $(".selector--list").niceScroll({
-    //autohidemode: false,
     cursorcolor: "#00b7e8",
-    cursoropacitymin: .5,
+    cursoropacitymin: .1,
     cursorwidth: "5px",
     cursorborder: "0 solid #fff",
     cursorborderradius: "2.5px",
     background: '#fff',
     usetransition: false,
-    railpadding: { top: 5, right: 2.5, left: 0, bottom: 5 }
+    railpadding: { top: 5, right: 5, left: 5, bottom: 5 }
   });
+
+  $('[type=file]').bind('change', function() { 
+    var $fileName = ''; 
+    $fileName = $(this).val().split(/(\\|\/)/g).pop();
+    $label = $(this).closest('.input--upload').find('label > span') 
+    $label.text($fileName); 
+  });
+
+  $('.select2').select2({
+    theme: 'light2',
+    width: '100%',
+    minimumResultsForSearch: -1,
+  }).on("select2:open", function () {
+    $('.select2-results__options').niceScroll({
+      cursorcolor: "#00b7e8",
+      cursoropacitymin: .1,
+      cursorwidth: "5px",
+      cursorborder: "0 solid #fff",
+      cursorborderradius: "2.5px",
+      background: '#fff',
+      usetransition: false,
+      railpadding: { top: 5, right: 5, left: 5, bottom: 5 }
+    });
+  });
+
+
 
   $(window).on('resize', function() {
     setTimeout(function () {
       $('.selector--list').getNiceScroll().resize()
+      $('.select2-results__options').getNiceScroll().resize()
     }, 500)
   });
 
+  $(document).ready(function() {
+    $('.popup-youtube').magnificPopup({
+      disableOn: 700,
+      type: 'iframe',
+      removalDelay: 160,
+      preloader: false,
+      showCloseBtn: true,
+      //fixedContentPos: false
+    });
+    $('.mt__about--slider').magnificPopup({
+      delegate: 'a',
+      type: 'image',
+      //fixedContentPos: false,
+      gallery: {enabled: true,navigateByImgClick: false,preload: [0,1]},
+      image: {
+        verticalFit: false,
+        tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+        titleSrc: function(item) {return item.el.data('title')},
+        descSrc: function(item) {return item.el.data('text')},
+        markup: '<div class="mfp-wraper"><div class="mfp-img"></div><div class="mfp-info"><h3 class="mfp-title"></h3><p class="mfp-desc"></p></div></div><button class="mfp-close"></button>',
+      },
+      callbacks: {
+        buildControls: function() {this.contentContainer.append(this.arrowLeft.add(this.arrowRight));},
+        markupParse: function(template, values, item) {values.desc = item.el.data('text');}
+      }
+    });
+  });

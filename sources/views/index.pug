@@ -18,9 +18,15 @@ block content
           p: strong Ваш отдых станет счастливым и здоровым!
 
       #video__about.owl-carousel
-        .item-video: a.owl-video(href="http://www.youtube.com/watch?v=RtBbinpK5XI")
-        .item-video: a.owl-video(href="http://www.youtube.com/watch?v=txTqtm58AqM")
-        .item-video: a.owl-video(href="http://www.youtube.com/watch?v=I2XfVml6o24")
+        .item.popup-youtube(data-mfp-src="http://www.youtube.com/watch?v=RtBbinpK5XI")
+          .owl-play-icon: svg: use(xlink:href="#play")
+          img(src="img/about.jpg", alt="")
+        .item.popup-youtube(data-mfp-src="http://www.youtube.com/watch?v=txTqtm58AqM")
+          .owl-play-icon: svg: use(xlink:href="#play")
+          img(src="img/about.jpg", alt="")
+        .item.popup-youtube(data-mfp-src="http://www.youtube.com/watch?v=I2XfVml6o24")
+          .owl-play-icon: svg: use(xlink:href="#play")
+          img(src="img/about.jpg", alt="")
   section.mt__why
     .container
       h2 Почему отдых в Молдавии
@@ -50,21 +56,34 @@ block content
           .why--title Забота
           .why--text На протяжении всего пребывания в Молдове, каждому клиенту будет предоставлен индивидуальный менеджер, который позаботиться о Вас. Каждый гость для нас особенно важен. Ваш комфорт – наша главная цель.
   section.mt__about--slider.owl-carousel
-    - for(i=1;i<=5;i++)
-      .item
-        img(src="img/slide.jpg", alt="").item--slide
-        .item--text
-          .container
-            .row
-              .col.md-10.offset-md-1 
-                p Разнообразный и богатый опыт укрепление и развитие структуры позволяет оценить значение дальнейших направлений развития. Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации систем массового участия. 
+    a.item(data-mfp-src="http://farm4.staticflickr.com/3763/9204547649_0472680945_o.jpg" data-title="Комплекс монастырей" data-text="Четыре уникальных монастыря известны не только своим интересным прошлым, но и тем, что будучи местом паломничества, сюда ежегодно приезжают верующие со всего мира. Многие так же  называют данный комплекс “Православным крестом”, из-за необычного расположения монастырей. Если взглянуть на карту, то можно увидеть как 2 отрезка дороги, ведущие к монастырям, пересекаются в виде креста.")
+      img(src="img/slide.jpg", alt="").item--slide
+      .item--text
+        .container
+          .row
+            .col.md-10.offset-md-1 
+              p Разнообразный и богатый опыт укрепление и развитие структуры позволяет оценить значение дальнейших направлений развития. Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации систем массового участия. 
+    a.item(data-mfp-src="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_b.jpg" data-title="Комплекс монастырей" data-text="Четыре уникальных монастыря известны не только своим интересным прошлым, но и тем, что будучи местом паломничества, сюда ежегодно приезжают верующие со всего мира. Многие так же  называют данный комплекс “Православным крестом”, из-за необычного расположения монастырей. Если взглянуть на карту, то можно увидеть как 2 отрезка дороги, ведущие к монастырям, пересекаются в виде креста.")
+      img(src="img/slide.jpg", alt="").item--slide
+      .item--text
+        .container
+          .row
+            .col.md-10.offset-md-1 
+              p Разнообразный и богатый опыт укрепление и развитие структуры позволяет оценить значение дальнейших направлений развития. Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации систем массового участия. 
+    a.item(data-mfp-src="http://farm9.staticflickr.com/8378/8559402848_9fcd90d20b_b.jpg" data-title="Комплекс монастырей" data-text="Четыре уникальных монастыря известны не только своим интересным прошлым, но и тем, что будучи местом паломничества, сюда ежегодно приезжают верующие со всего мира. Многие так же  называют данный комплекс “Православным крестом”, из-за необычного расположения монастырей. Если взглянуть на карту, то можно увидеть как 2 отрезка дороги, ведущие к монастырям, пересекаются в виде креста.")
+      img(src="img/slide.jpg", alt="").item--slide
+      .item--text
+        .container
+          .row
+            .col.md-10.offset-md-1 
+              p Разнообразный и богатый опыт укрепление и развитие структуры позволяет оценить значение дальнейших направлений развития. Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации систем массового участия. 
   section.mt__feedback
     .container
       h2 Отзывы
       .owl-carousel
         - for(i=1;i<=5;i++)
           .item
-            .item--image
+            .item--image.popup-youtube(data-mfp-src="https://www.youtube.com/watch?v=Q0oIoR9mLwc")
               img(src="img/fb1.jpg", alt="")
               span: svg: use(xlink:href="#play")
             .item--text
@@ -72,7 +91,7 @@ block content
                 small Германия
               p Nullam leo nulla, ultrices ut justo vitae, congue semper lectus. In ultrices ligula sed luctus venenatis
           .item
-            .item--image
+            .item--image.popup-youtube(data-mfp-src="https://www.youtube.com/watch?v=wNvOUkRTkz8")
               img(src="img/fb2.jpg", alt="")
               span: svg: use(xlink:href="#play")
             .item--text
@@ -80,7 +99,7 @@ block content
                 small Франция
               p Nullam leo nulla, ultrices ut justo vitae, congue semper lectus. In ultrices ligula sed luctus venenatis
           .item
-            .item--image
+            .item--image.popup-youtube(data-mfp-src="https://www.youtube.com/watch?v=-2SeFnvs73A")
               img(src="img/fb3.jpg", alt="")
               span: svg: use(xlink:href="#play")
             .item--text
@@ -88,7 +107,7 @@ block content
                 small Испания
               p Nullam leo nulla, ultrices ut justo vitae, congue semper lectus. In ultrices ligula sed luctus venenatis
           .item
-            .item--image
+            .item--image.popup-youtube(data-mfp-src="https://www.youtube.com/watch?v=xNNVyGonlKU")
               img(src="img/fb4.jpg", alt="")
               span: svg: use(xlink:href="#play")
             .item--text
@@ -120,20 +139,49 @@ block content
   section.mt__priceform
     .container
       h2 Расчет стоимости лечения
-      form: .row
-        .col.md-6
-          .row
-            .col.sm-6: .input--light: input(type="text" placeholder="Имя")
-            .col.sm-6: .input--light: input(type="text" placeholder="Фамилия")
-            .col.sm-6: .input--light: input(type="tel" placeholder="Телефон/Viber/WhatsApp")
-            .col.sm-6: .input--light: input(type="email" placeholder="E-mail")
-        .col.md-6: .input--light: textarea(cols="30", rows="10" placeholder="Сообщение")
-        .col.md-6: .input--upload
-          input(type="file")#file_upload
-          label(for="file_upload") 
-            svg: use(xlink:href="#upload")
-            span Прикрепить панорамный снимок либо 3D
-
+      form
+        .row
+          .col.md-6
+            .row
+              .col.sm-6: .input--light: input(type="text" placeholder="Имя" required name="priceform_name")
+              .col.sm-6: .input--light: input(type="text" placeholder="Фамилия" required name="priceform_name")
+              .col.sm-6: .input--light: input(type="tel" placeholder="Телефон/Viber/WhatsApp" required name="priceform_phone")
+              .col.sm-6: .input--light: input(type="email" placeholder="E-mail" required name="priceform_mail")
+          .col.md-6: .input--light: textarea(cols="30", rows="10" placeholder="Сообщение" required name="priceform_message")
+        .row.bottom
+          .col.md-6: .input--upload
+            input(type="file" required name="priceform_file")#file_upload
+            label(for="file_upload") 
+              svg: use(xlink:href="#upload")
+              span Прикрепить панорамный снимок либо 3D
+          .col.md-6: button(type="submit").btn.submit.fat Отправить
+  section.mt__partners
+    .container
+      h2 Наши партнеры
+      .row
+        .col.md-10.offset-md-1
+          .owl-carousel
+            - for(i=1;i<=5;i++)
+              .item: img(src="img/p1.jpg", alt="")
+              .item: img(src="img/p2.jpg", alt="")
+              .item: img(src="img/p3.jpg", alt="")
+              .item: img(src="img/p4.jpg", alt="")
+              .item: img(src="img/p5.jpg", alt="")
+  section.mt__cert
+    .container
+      h2 Сертификаты и дипломы
+      .row
+        .col.md-10.offset-md-1
+          .owl-carousel
+            - for(i=1;i<=5;i++)
+              .item
+                .row.middle
+                  .col.sm-6
+                    .item--image
+                      img(src="img/cert.jpg", alt="").cert
+                      img(src="img/cert_bg.jpg", alt="").bg
+                  .col.sm-6: .item--text
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in erat commodo, imperdiet lacus in, posuere mi. Duis lacinia efficitur interdum. Duis et enim mollis tortor facilisis porta. Curabitur id lectus auctor, auctor nibh a, congue libero. Nunc laoreet enim eu condimentum mollis. Aenean lacinia lorem sit amet ligula volutpat ultricies. Suspendisse lorem velit, finibus ut est a, consectetur faucibus dui. Donec dictum, lacus quis mattis mollis, mi justo ornare augue, aliquet vehicula magna eros at urna. Phasellus consequat sapien sed risus scelerisque mollis.
   section.mt__guests
     .container: .map--title: span Наши гости
     #supermap
@@ -172,6 +220,66 @@ block content
             .panel: #it.panel-collapse.collapse
               p Виза для граждан Италии на територий Р.М. не требуется
               p срок пребывании до 90 дней
+  section.mt__offers
+    .container
+      h2 Наши предложения
+      form
+        .row.middle
+          .col.md-8
+            .row
+              .col.sm-6: .input--light2
+                svg.calendar: use(xlink:href="#calendar")
+                input(type="text" placeholder="Дата прилета" required name="offer_in" onfocus="(this.type='date')")
+              .col.sm-6: .input--light2
+                svg.calendar: use(xlink:href="#calendar")
+                input(type="text" placeholder="Дата отлета" required name="offer_out" onfocus="(this.type='date')")
+              .col.sm-6: .input--light2
+                select.select2
+                  option(disabled selected) Количество туристов
+                  option 1
+                  option 2
+                  option 3
+                  option 4
+                  option 5
+                  option > 5
+              .col.sm-6: .input--light2
+                select.select2
+                  option(disabled selected) Тип номера
+                  option Тип номера 1
+                  option Тип номера 2
+                  option Тип номера 3
+            .row.middle
+              .col.sm-6: .total Стоимость: 2354 $
+              .col.sm-6: button(type="submit").btn.submit.fat Оформить заказ
+          .col.md-4: ul.checklist
+            li
+              svg: use(xlink:href="#done")
+              span Трансфер аэропорт-отель-аэропорт
+            li
+              svg: use(xlink:href="#done")
+              span Отель
+            li
+              svg: use(xlink:href="#done")
+              span Диагностика врача
+            li
+              svg: use(xlink:href="#done")
+              span Вечер Гурмана (подарок)
+            li
+              svg: use(xlink:href="#done")
+              span Вечер Сомелье (подарок)
+  section.mt__inst
+    .container
+      h2 
+        span Instagram
+        img(src="img/inst.jpg", alt="")
+      .super__align
+        .row
+          .col.sm-4.xs-6: a(href="https://www.instagram.com/p/Bhiqga6g2ZC/?tagged=idiot" target="_blank").item: img(src="img/inst1.jpg", alt="")
+          .col.sm-4.xs-6: a(href="https://www.instagram.com/p/Bhiqga6g2ZC/?tagged=idiot" target="_blank").item: img(src="img/inst2.jpg", alt="")
+          .col.sm-4.xs-6: a(href="https://www.instagram.com/p/Bhiqga6g2ZC/?tagged=idiot" target="_blank").item: img(src="img/inst3.jpg", alt="")
+          .col.sm-4.xs-6: a(href="https://www.instagram.com/p/Bhiqga6g2ZC/?tagged=idiot" target="_blank").item: img(src="img/inst4.jpg", alt="")
+          .col.sm-4.xs-6: a(href="https://www.instagram.com/p/Bhiqga6g2ZC/?tagged=idiot" target="_blank").item: img(src="img/inst5.jpg", alt="")
+          .col.sm-4.xs-6: a(href="https://www.instagram.com/p/Bhiqga6g2ZC/?tagged=idiot" target="_blank").item: img(src="img/inst6.jpg", alt="")
 
 
 

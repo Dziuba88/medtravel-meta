@@ -14,10 +14,19 @@ html(lang="ru")
     header.mt__header
       .topbar
         .container
-          .topbar--wraper
-            .topbar__left
-            .topbar__right
-      .navbar
+          .row.middle
+            .col.sm-6: ul.iconic
+              li: a(href="https://facebook.com/" target="_blank"): svg: use(xlink:href="#fb")
+              li: a(href="https://ok.ru/" target="_blank"): svg: use(xlink:href="#od")
+              li: a(href="https://vk.com/" target="_blank"): svg: use(xlink:href="#vk")
+              li: a(href="https://www.instagram.com/" target="_blank"): svg: use(xlink:href="#in")
+            .col.sm-6
+              span.icons
+                a.f1(href="viber://chat?number=37369112233"): svg: use(xlink:href="#call")
+                a.f2(href="whatsapp://send?phone=+37369112233"): svg: use(xlink:href="#chat")
+              a(href="tel:+37369112233").phone +373 69 11 22 33
+              a(href="mailto:info@medtravel.md").mail info@medtravel.md
+      .stick: .navbar
         .container
           .navbar--wraper
             .navbar__left
@@ -45,6 +54,64 @@ html(lang="ru")
                     li: a(href="") IS
                     li: a(href="") DE
     block content
+    footer.mt__footer
+      .container
+        .row
+          .col.md-3
+            h4 Разделы
+            ul.menu
+              li: a(href="") Лечение
+              li: a(href="") Отдых и развлечения
+              li: a(href="") Стоимость
+              li: a(href="") Задай вопрос доктору
+              li: a(href="") Отзывы
+              li: a(href="") Сертификаты и премии
+          .col.md-3
+            h4 Контакты
+            ul.iconic
+              li: a(href="whatsapp://send?phone=+37369112233")
+                svg: use(xlink:href="#chat")
+                | +373 69 11 22 33
+              li: a(href="viber://chat?number=37369112233")
+                svg: use(xlink:href="#call")
+                | +373 69 11 22 33
+              li: a(href="tel:+37369112233") +373 69 11 22 33
+              li: a(href="mailto:info@medtravel.md") info@medtravel.md
+              li: span Г. Кишинев ул. Миорица 88
+          .col.md-3
+            h4 Социальные сети
+            ul.iconic
+              li: a(href="")
+                svg: use(xlink:href="#fb")
+                | facebook
+              li: a(href="")
+                svg: use(xlink:href="#od")
+                | odnoklassniki
+              li: a(href="")
+                svg: use(xlink:href="#vk")
+                | vkontakte
+              li: a(href="")
+                svg: use(xlink:href="#in")
+                | instagram
+          .col.md-3
+            .widgets
+              .time
+                span 12:30 
+                span Кишинев
+              .weather
+                span -8<sup>o</sup> C
+                img(src="img/weather/weather-01.svg", alt="")
+              .exchange
+                .item 1 $ = 17,5 MDL
+                .item 1 € = 20,5 MDL
+        .copyrights
+          .row.middle
+            .col.sm-6
+              img(src="img/logo.png", alt="").logo
+              span © 2018
+            .col.sm-6
+              span Мы принимаем:
+              img(src="img/systems.png", alt="")
     // block scripts
     script(src="js/jquery-3.3.1.min.js")
     script(src="js/plugins.min.js")

@@ -1,14 +1,13 @@
 @import 'lib/variables';
 @import 'lib/normalize';
 @import 'lib/grid';
-//@import 'plugins/typography';
-//@import 'plugins/layouts';
-//@import 'plugins/swiper';
-//@import 'plugins/niceselect';//
 
 @import 'plugins/dropdown';
 @import 'plugins/owlcarousel';
+@import 'plugins/select2';
+@import 'plugins/magnific-popup';
 
 @import 'layouts/default';
 @import 'layouts/header';
+@import 'layouts/footer';
 @import 'layouts/index';

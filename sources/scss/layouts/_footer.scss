@@ -1,0 +1,94 @@
+.mt__footer {
+  background: url(../img/footer.jpg) no-repeat center center;
+  background-size: cover;
+  padding-top: 30px;
+  color: #ffffff;
+  flex : none;
+
+  h4 {
+    color: #00b7e8;
+    margin: 0 0 30px;
+    line-height: 1;
+    font-size: 20px;
+    font-weight: 400;
+    padding-top: 30px;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: block;
+      position: relative;
+      line-height: 20px;
+      margin-bottom: 9px;
+
+      a {
+        display: block;
+        text-decoration: none;
+        color: #ffffff;
+
+        &:hover {
+          color: #00b7e8;
+        }
+      }
+    }
+
+    &.iconic {
+      li {
+        padding-left: 36px;
+        margin-bottom: 16px;
+
+        svg {
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 50%;
+          width: 25px;
+          height: 50px;
+          transform: translateY(-50%);
+          fill: currentColor;
+        }
+      }
+    }
+  }
+
+  .widgets {
+    padding-top: 80px;
+    line-height: 26px;
+
+    .weather {
+      img {
+        width: 45px;
+        margin-left: 5px;
+      }
+    }
+  }
+
+  .copyrights {
+    border-top: 1px solid #ffffff;
+    padding: 10px 0;
+
+    .col {
+      &:first-child {
+        img {
+          line-height: 1;
+          vertical-align: middle;
+          width: 127px;
+          margin-right: 5px;
+        }
+      }
+      &:last-child {
+        text-align: right;
+        img {
+          line-height: 1;
+          vertical-align: middle;
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+
+}

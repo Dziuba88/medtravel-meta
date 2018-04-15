@@ -22,27 +22,141 @@ block content
       .super__align
         .row
           .col.md-4: .doctor
-            img(src="img/doc1.jpg", alt="").doctor--image
+            img(src="img/doc1.jpg", alt="", data-mfp-src="#doc1").doctor--image
             .doctor--name Cергей Дуров
             .doctor--spec стоматолог-терапевт
             .doctor--video.popup-youtube(data-mfp-src="http://www.youtube.com/watch?v=RtBbinpK5XI")
               span Смотреть видео
               svg: use(xlink:href="#video")
           .col.md-4: .doctor
-            img(src="img/doc2.jpg", alt="").doctor--image
+            img(src="img/doc2.jpg", alt="", data-mfp-src="#doc2").doctor--image
             .doctor--name Наталия Петрова
             .doctor--spec стоматолог-ортодонт
             .doctor--video.popup-youtube(data-mfp-src="http://www.youtube.com/watch?v=txTqtm58AqM")
               span Смотреть видео
               svg: use(xlink:href="#video")
           .col.md-4: .doctor
-            img(src="img/doc3.jpg", alt="").doctor--image
+            img(src="img/doc3.jpg", alt="", data-mfp-src="#doc3").doctor--image
             .doctor--name Иван Иванов
             .doctor--spec стоматолог-пародонтолог
             .doctor--video.popup-youtube(data-mfp-src="http://www.youtube.com/watch?v=I2XfVml6o24")
               span Смотреть видео
               svg: use(xlink:href="#video")
-
+    #doc1.mfp-hide.doc__popup: .doc__popup--wraper
+      .doc__popup--img: img(src="img/doc1.jpg", alt="")
+      .doc__popup--text
+        h4 Константин Константинопольский
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi malesuada a justo quis facilisis. Duis suscipit, felis non elementum bibendum, neque sapien hendrerit risus, a imperdiet lectus ipsum ut ante. Pellentesque a tempor orci, sed luctus sapien. Aliquam id pretium mauris.
+    #doc2.mfp-hide.doc__popup: .doc__popup--wraper
+      .doc__popup--img: img(src="img/doc2.jpg", alt="")
+      .doc__popup--text
+        h4 Константин Константинопольский
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi malesuada a justo quis facilisis. Duis suscipit, felis non elementum bibendum, neque sapien hendrerit risus, a imperdiet lectus ipsum ut ante. Pellentesque a tempor orci, sed luctus sapien. Aliquam id pretium mauris.
+    #doc3.mfp-hide.doc__popup: .doc__popup--wraper
+      .doc__popup--img: img(src="img/doc3.jpg", alt="")
+      .doc__popup--text
+        h4 Константин Константинопольский
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi malesuada a justo quis facilisis. Duis suscipit, felis non elementum bibendum, neque sapien hendrerit risus, a imperdiet lectus ipsum ut ante. Pellentesque a tempor orci, sed luctus sapien. Aliquam id pretium mauris.
+  section.mt__treatment--services
+    .container
+      .container
+        h2 Наши услуги
+        .super__align
+          .services__list
+            a.service(href="service.html")
+              img.icon(src="img/s1.png", alt="")
+              h4 Зубные импланты
+            a.service(href="service.html")
+              img.icon(src="img/s2.png", alt="")
+              h4 Диагностика зубов
+            a.service(href="service.html")
+              img.icon(src="img/s3.png", alt="")
+              h4 Лечение зубов
+            a.service(href="service.html")
+              img.icon(src="img/s4.png", alt="")
+              h4 Лечение дёсен
+            a.service(href="service.html")
+              img.icon(src="img/s5.png", alt="")
+              h4 Ортодонтия
+            a.service(href="service.html")
+              img.icon(src="img/s6.png", alt="")
+              h4 Удаление зубов
+            a.service(href="service.html")
+              img.icon(src="img/s7.png", alt="")
+              h4 Протезирование зубов
+            a.service(href="service.html")
+              img.icon(src="img/s8.png", alt="")
+              h4 Отбеливание зубов
+            a.service(href="service.html")
+              img.icon(src="img/s9.png", alt="")
+              h4 Профилактика
+            a.service(href="service.html")
+              img.icon(src="img/s10.png", alt="")
+              h4 Детская стоматология
+  section.mt__treatment--cases
+    .container
+      h2 Наши кейсы
+      .super__align
+        .owl-carousel
+          - for(i=0;i<5;i++)
+            .case
+              img(src="img/c1.jpg", alt="", , data-mfp-src="#case").case--link
+              .case--title Константин Константинопольский
+              .case--country Германия
+              .case--type Лечение: импланты
+            .case
+              img(src="img/c2.jpg", alt="", , data-mfp-src="#case").case--link
+              .case--title Константин Константинопольский
+              .case--country Германия
+              .case--type Лечение: импланты
+            .case
+              img(src="img/c3.jpg", alt="", , data-mfp-src="#case").case--link
+              .case--title Константин Константинопольский
+              .case--country Германия
+              .case--type Лечение: импланты
+    #case.mfp-hide.case__popup: .case__popup--wraper
+      .case__popup--text
+        h4 Константин Константинопольский
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi malesuada a justo quis facilisis. Duis suscipit, felis non elementum bibendum, neque sapien hendrerit risus, a imperdiet lectus ipsum ut ante. Pellentesque a tempor orci, sed luctus sapien. Aliquam id pretium mauris.
+  section.mt__treatment--prices
+    .container
+      h2 Наши цены
+      .pricetable
+        .pricetable__row
+          .pricetable__text: span Первичная консультация врача стоматолога 
+          .pricetable__value: span подарок
+        .pricetable__row
+          .pricetable__text: span Повторная консультация 
+          .pricetable__value: span бонус
+        .pricetable__row
+          .pricetable__text: span Осмотр после хирургического вмешательства
+          .pricetable__value: span бонус
+        .pricetable__row
+          .pricetable__text: span Направление к специалисту другой специализации 
+          .pricetable__value: span бонус
+        .pricetable__row
+          .pricetable__text: span Перевязка или осмотр после операции (механическая и медикаментозная<br>обработка послеоперационной раны)
+          .pricetable__value: span бонус
+        .pricetable__row
+          .pricetable__text: span Инфильтрационная + апликационная анестезия
+          .pricetable__value: span 6 €
+        .pricetable__row
+          .pricetable__text: span Airflow (1 челюсть)
+          .pricetable__value: span 18 €
+        .pricetable__row
+          .pricetable__text: span Профессиональное отбеливание зубов аппаратом «Zoom» 
+          .pricetable__value: span 360 €
+      #more.collapse: .pricetable
+        .pricetable__row
+          .pricetable__text: span Первичная консультация врача стоматолога 
+          .pricetable__value: span подарок
+        .pricetable__row
+          .pricetable__text: span Повторная консультация 
+          .pricetable__value: span бонус
+        .pricetable__row
+          .pricetable__text: span Осмотр после хирургического вмешательства
+          .pricetable__value: span бонус
+      .super__align: .btn--showmore(data-toggle="collapse" data-target="#more" aria-expanded="false" aria-controls="more") Показать ещё
   section.mt__priceform
     .container
       h2 Задать вопрос

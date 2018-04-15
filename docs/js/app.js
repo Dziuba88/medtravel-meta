@@ -89,6 +89,14 @@
     navText: ['<svg><use xlink:href="#prev"></use></svg>' , '<svg><use xlink:href="#next"></use></svg>'],
   });
 
+  $('.mt__treatment--cases .owl-carousel').owlCarousel({
+    loop: true,
+    dots: true,
+    nav: true,
+    navText: ['<svg><use xlink:href="#prev"></use></svg>' , '<svg><use xlink:href="#next"></use></svg>'],
+    responsive : {0:{slideBy: 1,items: 1},480:{slideBy: 2,items: 2},1000:{slideBy: 3,items: 3}}
+  });
+
   // supermap //
   if ($('#supermap').length) {
     var map_styler = [
@@ -289,6 +297,7 @@
       showCloseBtn: true,
       //fixedContentPos: false
     });
+
     $('.mt__about--slider').magnificPopup({
       delegate: 'a',
       type: 'image',
@@ -306,5 +315,7 @@
         markupParse: function(template, values, item) {values.desc = item.el.data('text');}
       }
     });
+
+    $('.doctor--image, .case--link').magnificPopup({type: 'inline',preloader: false});
   });
 
